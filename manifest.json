@@ -6,9 +6,23 @@
   "permissions": [],
   "content_scripts": [
     {
-      "matches": ["https://playmahjong.io/*"],
-      "js": ["bundle.js"],
+      "matches": [
+        "https://playmahjong.io/*"
+      ],
+      "js": [
+        "bundle.js"
+      ],
       "run_at": "document_idle"
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ed0neqbs1@mozmail.com"
+    }
+  },
+  "icons": {
+    "48": "icon/icon48.png",
+    "96": "icon/icon96.png",
+    "128": "icon/icon128.png"
+  }
 }

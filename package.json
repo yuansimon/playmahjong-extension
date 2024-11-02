@@ -15,9 +15,7 @@
     "webpack-cli": "^5.1.4"
   },
   "scripts": {
-    "win-build-dev": "webpack --config webpack.config-dev.js && copy manifest.json build\\dev\\manifest.json",
-    "win-build": "webpack --config webpack.config.js && copy manifest.json build\\publish\\manifest.json && powershell Compress-Archive -Path build\\publish\\* -DestinationPath build\\publish.zip",
     "build-dev": "webpack --config webpack.config-dev.js && cp manifest.json build/dev/manifest.json",
-    "build": "webpack --config webpack.config.js && cp manifest.json build/publish/manifest.json && zip -r -j build/publish.zip build/publish/*"
+    "build": "webpack --config webpack.config.js && cp -r icon build/publish && cp manifest.json build/publish/manifest.json && cd build/publish && zip -r ../publish.zip *"
   }
 }

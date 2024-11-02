@@ -1,0 +1,23 @@
+{
+  "name": "playmahjong-extension",
+  "version": "1.0.0",
+  "description": "Chrome and Firefox Browser Extension for playmahjong.io",
+  "main": "main.js",
+  "author": "Simon Yuan",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "eslint": "^9.12.0",
+    "eslint-plugin-jsdoc": "^50.4.1",
+    "globals": "^15.11.0",
+    "typescript": "^5.6.3",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "win-build-dev": "webpack --config webpack.config-dev.js && copy manifest.json build\\dev\\manifest.json",
+    "win-build": "webpack --config webpack.config.js && copy manifest.json build\\publish\\manifest.json && powershell Compress-Archive -Path build\\publish\\* -DestinationPath build\\publish.zip",
+    "build-dev": "webpack --config webpack.config-dev.js && cp manifest.json build/dev/manifest.json",
+    "build": "webpack --config webpack.config.js && cp manifest.json build/publish/manifest.json && zip -r -j build/publish.zip build/publish/*"
+  }
+}

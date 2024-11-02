@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "playmahjong",
+  "version": "1.0",
+  "description": "Enables additional functionality on playmahjong.io",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["https://playmahjong.io/*"],
+      "js": ["bundle.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

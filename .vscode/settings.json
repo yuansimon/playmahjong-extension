@@ -1,0 +1,10 @@
+{
+    "eslint.workingDirectories": [ "./src" ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.validate": [
+        "javascript"
+    ],
+    "javascript.format.semicolons": "insert"
+}
